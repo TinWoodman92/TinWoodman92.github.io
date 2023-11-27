@@ -1,4 +1,4 @@
-#TinWoodman92's intial website
+# TinWoodman92's intial website
 
 https://tinwoodman92.github.io/
 
