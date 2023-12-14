@@ -1,3 +1,1 @@
-function alertButton() {
-	alert("Hello world!")
-}
+console.log('Hello from app.js!');

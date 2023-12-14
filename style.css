@@ -50,6 +50,7 @@ body {
 
 p {
 	color: var(--foreground-theme-color);
+	text-indent: 4em;
 }
 
 hr {
