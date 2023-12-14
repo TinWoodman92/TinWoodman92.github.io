@@ -44,28 +44,21 @@
 }
 
 body {
-	color: var(--foreground-theme-color);
+	color: var(--foreground-accent-color);
 	background-color: var(--background-theme-color);
 }
 
+p {
+	color: var(--foreground-theme-color);
+}
+
 hr {
-	color: var(--foreground-accent-color);
+	border-color: var(--foreground-accent-color);
 }
 
 nav {
 	color: var(--foreground-accent-color);
-}
-
-h1 {
-	color: var(--foreground-accent-color);
-}
-
-h2 {
-	color: var(--foreground-accent-color);
-}
-
-h3 {
-	color: var(--foreground-accent-color);
+	text-align: center;
 }
 
 a {
