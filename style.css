@@ -1,23 +1,81 @@
+:root{
+	--dark-theme-check: 1;
+	--theme-color-check: 1;
+	--accent-color-check: 1;
+	--theme-hue: 90;
+	--accent-offset: 60;
+	--accent-hue: calc(var(--theme-hue) + var(--accent-offset));
+	
+	/* Contrast hue - the color for hyperlinks and selection.
+	Default hue is 210, but we want it the +180 opposite hue of theme if there is a theme color.*/
+	--theme-contrast-hue: calc(calc(var(--theme-hue) + 180) * var(--theme-color-check));
+	--default-contrast-hue: calc(210 - calc(var(--theme-color-check) * 210));
+	--contrast-hue: calc(var(--theme-contrast-hue) + var(--default-contrast-hue));
+
+	--foreground-lightness: calc(10% + calc(var(--dark-theme-check) * 70%));
+	--background-lightness: calc(80% - calc(var(--dark-theme-check) * 70%));
+	--contrast-lightness: calc(30% + calc(var(--dark-theme-check) * 55%));
+	--foreground-theme-color: hsl(
+		var(--theme-hue),
+		calc(var(--theme-color-check) * 100%),
+		var(--foreground-lightness)
+		);
+	--background-theme-color: hsl(
+		var(--theme-hue),
+		calc(var(--theme-color-check) * 25%),
+		var(--background-lightness)
+		);
+	--foreground-accent-color: hsl(
+		var(--accent-hue),
+		calc(var(--accent-color-check) * 100%),
+		var(--foreground-lightness)
+		);
+	--background-accent-color: hsl(
+		var(--accent-hue),
+		calc(var(--accent-color-check) * 100%),
+		var(--background-lightness)
+		);
+	--contrast-color: hsl(var(--contrast-hue), 100%, var(--contrast-lightness));				
+}
+
+::selection {
+	background-color: var(--contrast-color);
+	color: hsl(0, 0%, var(--background-lightness));
+}
+
 body {
-	background-color: black;
+	color: var(--foreground-theme-color);
+	background-color: var(--background-theme-color);
 }
 
-h1  {
-	color : magenta;
+hr {
+	color: var(--foreground-accent-color);
 }
 
-h2  {
-	color : cyan;
+nav {
+	color: var(--foreground-accent-color);
 }
 
-h3  {
-	color : yellow;
+h1 {
+	color: var(--foreground-accent-color);
 }
 
-p {
-	color: white;
+h2 {
+	color: var(--foreground-accent-color);
 }
 
-li {
-	color: white;
+h3 {
+	color: var(--foreground-accent-color);
+}
+
+a {
+	color: var(--contrast-color);
+}
+
+a:visited {
+	color: hsl(calc(var(--contrast-hue) + 60), 100%, var(--contrast-lightness))
+}
+
+a:hover {
+	color: hsl(calc(var(--contrast-hue) - 150), 100%, var(--contrast-lightness))
 }
