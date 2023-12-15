@@ -62,6 +62,18 @@ nav {
 	text-align: center;
 }
 
+ul {
+	text-indent: -2em;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+li {
+	text-indent: 0em;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
 a {
 	color: var(--contrast-color);
 }
