@@ -53,6 +53,12 @@ p {
 	text-indent: 4em;
 }
 
+p.header-sub-text {
+	font-size: 1.25em;
+	font-weight: bold;
+	text-indent: 0;
+}
+
 hr {
 	border-color: var(--foreground-accent-color);
 }
