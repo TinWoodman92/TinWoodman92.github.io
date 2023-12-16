@@ -14,6 +14,7 @@
 
 	--about-hue: 310;
 	--nnetwork-hue: 240;
+	--tic-tac-toe-hue: 60;
 
 	--foreground-lightness: calc(10% + calc(var(--dark-theme-check) * 70%));
 	--background-lightness: calc(80% - calc(var(--dark-theme-check) * 70%));
@@ -86,6 +87,10 @@ li {
 
 li.nnetwork {
 	color: hsl(var(--nnetwork-hue), 100%, var(--foreground-lightness));
+}
+
+li.tic-tac-toe {
+	color: hsl(var(--tic-tac-toe-hue), 100%, var(--foreground-lightness));
 }
 
 a {
