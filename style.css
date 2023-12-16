@@ -91,3 +91,12 @@ a:visited {
 a:hover {
 	color: hsl(calc(var(--contrast-hue) - 150), 100%, var(--contrast-lightness))
 }
+
+.dark-mode-container {
+	float: right;
+}
+
+input[type='checkbox'] {
+	border-color: var(--foreground-accent-color);
+	background-color: var(--background-accent-color);
+}
