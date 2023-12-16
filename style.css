@@ -49,6 +49,7 @@
 body {
 	color: var(--foreground-accent-color);
 	background-color: var(--background-theme-color);
+	transition: 250ms;
 }
 
 p {
