@@ -1,5 +1,9 @@
 console.log('Hello from app.js!');
 
+const setStyleVariable = function(styleVariable, styleValue) {
+	document.documentElement.style.setProperty(styleVariable, styleValue);
+};
+
 const toggleTheme = function() {
 	document.documentElement.style.setProperty(this.id, Number(this.checked));
 	localStorage.setItem(this.id, Number(this.checked));
@@ -16,8 +20,8 @@ const initInput = function(styleVariable=null) {
 
 	const inputObject = document.getElementById(styleVariable);
 	if (inputObject) {
-		inputObject.addEventListener('change', toggleTheme);
 		if (inputObject.type == 'checkbox') {
+			inputObject.addEventListener('change', toggleTheme);
 			inputObject.checked = initValue
 		};
 	};

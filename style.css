@@ -12,6 +12,9 @@
 	--default-contrast-hue: calc(210 - calc(var(--theme-color-check) * 210));
 	--contrast-hue: calc(var(--theme-contrast-hue) + var(--default-contrast-hue));
 
+	--about-hue: 310;
+	--nnetwork-hue: 240;
+
 	--foreground-lightness: calc(10% + calc(var(--dark-theme-check) * 70%));
 	--background-lightness: calc(80% - calc(var(--dark-theme-check) * 70%));
 	--contrast-lightness: calc(30% + calc(var(--dark-theme-check) * 55%));
@@ -78,6 +81,10 @@ li {
 	text-indent: 0em;
 	font-size: 1rem;
 	font-weight: normal;
+}
+
+li.nnetwork {
+	color: hsl(var(--nnetwork-hue), 100%, var(--foreground-lightness));
 }
 
 a {
