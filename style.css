@@ -42,6 +42,18 @@
 	--contrast-color: hsl(var(--contrast-hue), 100%, var(--contrast-lightness));				
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--dark-theme-check: 1;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--dark-theme-check: 0;
+	}
+}
+
 ::selection {
 	background-color: var(--contrast-color);
 	color: hsl(0, 0%, var(--background-lightness));

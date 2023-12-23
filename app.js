@@ -16,6 +16,7 @@ const initInput = function(styleVariable=null) {
 		document.documentElement.style.setProperty(styleVariable, initValue);
 	} else {
 		initValue = getComputedStyle(document.body).getPropertyValue(styleVariable);
+		initValue = Number(initValue);
 	};
 
 	const inputObject = document.getElementById(styleVariable);
