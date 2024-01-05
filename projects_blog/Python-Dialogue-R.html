@@ -30,18 +30,45 @@
 	<a href="https://github.com/chrhodgden/python-dialogue-r" target="_blank">GitHub Repository</a>
 	<h2 id="background">Background</h2>
 	<p>
-		
+		As I was learning both Python and R, I was curious to see if there was a way to get two programs to pass live data to each other.
+		I learned about sockets and how those are used to pass information in a live environment for chatting or even video games on a server.
+	</p>
+	<p>
+		I also learned Git about this time. The version control project documentation I found very helpful.
+		GitHub is also great as a central place to keep repositories.
+		I really wanted to build familiarity with how to build in Git to track changes and also work with a local repository and a central repository on GitHub.
+		I followed sockets tutorials for both Python and R
+		While learning, I committed my changes on Git and pushed them to GitHub.
+		Below is repository. Bit of a mess, I know, but it's still there.		
 	</p>
 	<a href="https://github.com/chrhodgden/sockets_demo" target="_blank">Sockets Demo Repository</a>
 	<p>
-		
+		Unit testing was another aspect of development I familiarized myself with.
+		I followed a tutorial by Corey Shafer for the unittest module in Python.
+		I was inspired by a Test-Driven-Development process.
+		It's a good habit to be in, so I decided to implement it on my next project. 
 	</p>
 	<h2 id="the-project">The Project</h2>
 	<p>
-		
+		The next challenge after figuring out how sockets work for both Python and R, was figuring out how to trigger their connection events from one command rather than setting it up in two terminals.
+		I did this by using Python's subprocess and threading modules.
+		It works by starting two Python threads. 
+		One executing package's R file using the terminal's Rscript command with subprocess.
+		The other thread opens the socket server and listens for a client.
+		R gets passed the target file's directory through the terminal and a UUID string that could be used to verify the sockets ports were intended to connect.
+		In networking, security seems something to get in a good habit for.
+		R then connects to the socket port and sends the UUID string to confirm the connection.
+		The R session then loads variables from the target file then waits for requests from the Python server.
 	</p>
 	<p>
-		
+		On interesting aspect was figuring out if I could pass information in a binary format.
+		This would allow us to work with all the different primitive data types.
+		R had a built-in way of converting the data with the WriteBin() and ReadBin() methods.
+		I added a module in Python using it's struct module. 
+	</p>
+	<p>
+		One major challenge was not being able to use the debugger in VSCode for the R side of the program.
+		I tried to get in good habits for this development process, but the threaded processes made that difficult to isolate.
 	</p>
 
 	<h2 id="what-i-learned">What I Learned</h2>
@@ -50,14 +77,23 @@
 		<li>Using Git and GitHub to track a project</li>
 		<li>How to use sockets to communicate between different programs</li>
 		<li>Using the Subprocess and Threading modules in Python</li>
+		<li>Converting primitive data to and from binary in Python and R</li>
 	</ul> 
+	<p>
+		One major benefit to having a test module set up is that it can show other how the package is intended to be used.
+		Now I just need to get in good habits with documentation.
+	</p>
 
 	<h2 id="next-steps">Next Steps</h2>
 	<p>
-		The current development branch is handle_vectors
+		The actual use-case for this package seems very limited and there are alternatives for Python and R integration.
+		I really wanted to see if this was possible and it is, just tedious.
 	</p>
 	<p>
-
+		It is relatively incomplete. The code is useful if it needs to be implemented.
+		The current development branch is handle_vectors. 
+		The master version can do primitive types, but since R fundamentally uses vectors, it would make sense to support that. 
+		Completing that feature and adding documentation would be next steps for this project.
 	</p>
 
 	<nav class="nav-footer">
