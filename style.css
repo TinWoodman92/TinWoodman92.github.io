@@ -87,20 +87,20 @@ nav {
 }
 
 ul {
-	text-indent: -2em;
-	font-size: 1.25em;
+	text-indent: -2rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 }
 
 ul.projects-blog {
 	color: var(--foreground-theme-color);
-	margin-left: 2em;
-	font-size: 1em;
+	margin-left: 2rem;
+	font-size: 1rem;
 	font-weight: normal;
 }
 
 li {
-	text-indent: 0em;
+	text-indent: 0rem;
 	font-size: 1rem;
 	font-weight: normal;
 }
@@ -133,7 +133,14 @@ a:hover {
 	float: right;
 }
 
-input[type='checkbox'] {
-	border-color: var(--foreground-accent-color);
-	background-color: var(--background-accent-color);
+@media (max-width: 600px) {
+	html {
+		font-size: 1.5rem; 
+	}
+}
+
+@media (min-width: 601px) {
+	html {
+		font-size: 1rem; 
+	}
 }
