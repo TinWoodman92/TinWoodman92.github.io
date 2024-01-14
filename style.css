@@ -148,5 +148,10 @@ a:hover {
 
 img.self-portrait {
 	float: right;
-	margin-right: 1rem;
+	margin: 0.5rem;
+}
+
+figure.project {
+	float: right;
+	margin: 0.5rem;
 }
