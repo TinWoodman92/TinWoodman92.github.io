@@ -1,0 +1,83 @@
+<svg 
+	width='100' height='100' viewbox='0 0 100 100'
+	xmlns='http://www.w3.org/2000/svg'
+	>
+	<style>
+		:root {
+			--dark-stroke-check: 0;	
+			--border-width: 2;
+			--border-lightness: calc(100% - calc(var(--dark-stroke-check) * 100%));
+			--base-fill: hsl(0, 0%, 50%);
+			--border-stroke: hsl(0, 0%, var(--border-lightness));
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--dark-stroke-check: 0;	
+			}
+		}
+		
+		@media (prefers-color-scheme: light) {
+			:root {
+				--dark-stroke-check: 1;	
+			}
+		}
+		
+		.base {
+			fill: var(--base-fill);
+			stroke: var(--border-stroke);
+			stroke-width: var(--border-width);
+		}
+		
+		.border {
+			stroke: var(--border-stroke);
+			stroke-width: var(--border-width);
+			fill-opacity: 0;
+		}
+	</style>
+	
+	<!--Database Cylinder-->
+	<path
+		class='base'
+		d='
+			M25 50, C25 60, 75 60, 75 50,
+			M75 50, C75 40, 25 40, 25 50,
+			L25 90,
+			M25 90, C25 100, 75 100, 75 90,
+			L75 90
+			L75 50
+		'
+	></path>
+
+	<!--Database Band 1-->
+	<path
+		class='border'
+		d='M25 63, C25 73, 75 73, 75 63'
+	></path>
+
+	<!--Database Band 2-->
+	<path
+		class='border'
+		d='M25 77, C25 87, 75 87, 75 77'
+	></path>
+
+	<!--Funnel Hat Shape-->
+	<path
+		class='base'
+		d='
+			M45 5,
+			L45 25,
+			L20 50,
+			C20 60, 80 60, 80 50,
+			L55 25,
+			L55 5
+		'
+	></path>
+
+	<!--Funnel Hat Tip-->
+	<ellipse
+		class='base'
+		cx='50' cy='5'
+		rx='5' ry='2'
+	/>	
+</svg>
