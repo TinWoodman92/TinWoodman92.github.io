@@ -55,6 +55,22 @@
 	}
 }
 
+@media (max-width: 600px) {
+	html {
+		font-size: 1.5rem; 
+	}
+}
+
+@media (min-width: 601px) {
+	html {
+		font-size: 1rem; 
+	}
+}
+
+.dark-mode-container {
+	float: right;
+}
+
 ::selection {
 	background-color: var(--contrast-color);
 	color: hsl(0, 0%, var(--background-lightness));
@@ -84,6 +100,7 @@ hr {
 nav {
 	color: var(--foreground-accent-color);
 	text-align: center;
+	clear: both;
 }
 
 ul {
@@ -129,18 +146,7 @@ a:hover {
 	color: hsl(calc(var(--contrast-hue) - 150), 100%, var(--contrast-lightness))
 }
 
-.dark-mode-container {
+img.self-portrait {
 	float: right;
-}
-
-@media (max-width: 600px) {
-	html {
-		font-size: 1.5rem; 
-	}
-}
-
-@media (min-width: 601px) {
-	html {
-		font-size: 1rem; 
-	}
+	margin-right: 1rem;
 }
