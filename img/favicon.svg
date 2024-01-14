@@ -35,19 +35,19 @@
 			L75 90
 			L75 50
 		'
-	></path>
+	/>
 
 	<!--Database Band 1-->
 	<path
 		class='border'
 		d='M25 63, C25 73, 75 73, 75 63'
-	></path>
+	/>
 
 	<!--Database Band 2-->
 	<path
 		class='border'
 		d='M25 77, C25 87, 75 87, 75 77'
-	></path>
+	/>
 
 	<!--Funnel Hat Shape-->
 	<path
@@ -60,7 +60,7 @@
 			L55 25,
 			L55 5
 		'
-	></path>
+	/>
 
 	<!--Funnel Hat Tip-->
 	<ellipse
