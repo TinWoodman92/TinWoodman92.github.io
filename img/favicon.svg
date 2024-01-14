@@ -4,23 +4,11 @@
 	>
 	<style>
 		:root {
-			--dark-stroke-check: 0;	
+			--dark-stroke-check: 1;	
 			--border-width: 2;
 			--border-lightness: calc(100% - calc(var(--dark-stroke-check) * 100%));
 			--base-fill: hsl(0, 0%, 50%);
 			--border-stroke: hsl(0, 0%, var(--border-lightness));
-		}
-
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--dark-stroke-check: 0;	
-			}
-		}
-		
-		@media (prefers-color-scheme: light) {
-			:root {
-				--dark-stroke-check: 1;	
-			}
 		}
 		
 		.base {
