@@ -146,12 +146,14 @@ a:hover {
 	color: hsl(calc(var(--contrast-hue) - 150), 100%, var(--contrast-lightness))
 }
 
+img {
+	max-width: 100%;
+}
+
 img.self-portrait {
 	float: right;
-	margin: 0.5rem;
 }
 
 figure.project {
 	float: right;
-	margin: 0.5rem;
 }
