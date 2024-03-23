@@ -1,6 +1,4 @@
-![Favicon](./img/favicon.svg)
-
-# My intial website
+# My intial website ![Favicon](./img/favicon.svg)
 
 https://chrhodgden.github.io/
 
