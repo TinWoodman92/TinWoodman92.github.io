@@ -18,6 +18,12 @@
 	--dialoguer-hue: 0;
 
 	--foreground-lightness: calc(10% + calc(var(--dark-theme-check) * 70%));
+	/* Consider adding a foreground accent lightness variable to resolve ugly-lightmode
+		- Perceived hue-saturation decreases as lightness diverges from 50%
+		- Target around 25% when --dark-theme-check is false
+		- --background-accent-color is not used, would be used in <th>
+	 */
+	--foreground-accent-lightness: calc(10% + calc(var(--dark-theme-check) * 70%));
 	--background-lightness: calc(80% - calc(var(--dark-theme-check) * 70%));
 	--contrast-lightness: calc(30% + calc(var(--dark-theme-check) * 55%));
 	--foreground-theme-color: hsl(
